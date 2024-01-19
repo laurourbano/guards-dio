@@ -1,0 +1,25 @@
+import { Component } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
+import { LoginService } from '../../services/login.service';
+
+@Component({
+  selector: 'app-produtos',
+  standalone: true,
+  imports: [RouterModule],
+  templateUrl: './produtos.component.html',
+  styleUrl: './produtos.component.scss'
+})
+export class ProdutosComponent {
+
+  constructor(
+    private service: LoginService,
+    private router: Router
+  ) {
+    
+  }
+  deslogar() {
+    this.service.doLogout();
+    this.router.navigate(['/login']);
+  }
+
+}
