@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { LoginService } from '../../services/login.service';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule, RouterModule],
+  imports: [FormsModule, RouterModule, MatButtonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
